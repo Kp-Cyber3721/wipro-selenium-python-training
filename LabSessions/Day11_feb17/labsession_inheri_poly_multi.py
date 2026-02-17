@@ -6,7 +6,7 @@ class Car:
         self.price = price
     def display(self):
         print(self.brand, self.model, self.price)
-c1 = Car("Toyota", "Camry", 30000)
+c1 = Car("Tata", "BYE", 30000)
 c1.display()
 
 #Create a Student class with method get_grade() based on marks.
@@ -158,11 +158,9 @@ class BankAccount:
 class Employee:
     def __init__(self, salary):
         self._salary = salary
-
     @property
     def salary(self):
         return self._salary
-
     @salary.setter
     def salary(self, value):
         if value >= 0:
@@ -180,15 +178,12 @@ class Shape:
 class Circle(Shape):
     def __init__(self, r):
         self.r = r
-
     def area(self):
         return 3.14 * self.r * self.r
-
 class Rectangle(Shape):
     def __init__(self, l, b):
         self.l = l
         self.b = b
-
     def area(self):
         return self.l * self.b
 
@@ -196,8 +191,6 @@ class Rectangle(Shape):
 class Math:
     def add(self, a, b=0, c=0):
         return a + b + c
-
-
 m = Math()
 print(m.add(5))
 print(m.add(5, 10))
@@ -207,11 +200,8 @@ print(m.add(5, 10, 15))
 class Number:
     def __init__(self, value):
         self.value = value
-
     def __add__(self, other):
         return self.value + other.value
-
-
 n1 = Number(10)
 n2 = Number(20)
 print(n1 + n2)

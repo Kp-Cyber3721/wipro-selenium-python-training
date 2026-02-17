@@ -20,13 +20,9 @@ def openbrowser():
     print("\n[Setup] Opening browser for class")
     yield
     print("\n[Teardown] Closing browser for class")
-
-
 class TestLogin:
-
     def test_login(self, openbrowser):
         print("Test Login")
-
     def test_logout(self, openbrowser):
         print("Test Logout")
 
@@ -43,6 +39,8 @@ def test_one(setup_module):
 
 def test_two(setup_module):
     print("Test Two")
+
+
 
 
 

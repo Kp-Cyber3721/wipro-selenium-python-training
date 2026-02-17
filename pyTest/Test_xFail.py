@@ -1,5 +1,5 @@
 #xfail is a marker used to indicate that a test is expected to fail due to a known issue (e.g., a bug or an unimplemented feature)
-
+import sys
 
 import pytest
 
@@ -20,6 +20,21 @@ def test_case2():
 @pytest.mark.db
 def test_case3():
     print("Testcase3 is executed")
+
+
+
+#xfail with a condition
+
+@pytest.mark.xfail(sys.platform == "win32" , reason ="Bug on windows")
+def test():
+    print("test on windows")
+
+# this x fail will fail only on windows
+#strict=True XFAIL FAILED fails the test duite
+@pytest.mark.xfail(strict=True, reason ="bug #1234 is not fixed yet")
+def test_function():
+    assert True
+
 
 
 

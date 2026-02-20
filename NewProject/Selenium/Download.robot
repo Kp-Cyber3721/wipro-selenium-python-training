@@ -9,10 +9,19 @@ ${DOWNLOADS}  D:/Downloads
 
 *** Test Cases ***
 Download File
-    Open Browser    ${URL}    chrome
-    Click Link    ${FILE}
+    # Set Chrome preferences for automatic download
+    &{prefs}=    Create Dictionary    download.default_directory=${DOWNLOADS}    profile.default_content_settings.popups=0
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
+    Call Method    ${options}    add_experimental_option    prefs    ${prefs}
 
-    Wait Until Keyword Succeeds    10x    1s
-    ...    File Should Exist    ${DOWNLOADS}/${FILE}
+    # Open Browser with options
+    Open Browser    ${URL}    chrome    options=${options}
+
+    # Wait until the link is visible and click
+    Wait Until Element Is Visible    xpath=//a[text()='${FILE}']    10s
+    Click Element    xpath=//a[text()='${FILE}']
+
+    # Wait until file exists
+    Wait Until Keyword Succeeds    20x    1s    File Should Exist    ${DOWNLOADS}/${FILE}
 
     Close Browser

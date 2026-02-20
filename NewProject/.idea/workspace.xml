@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a1c0c0d1-5259-4489-90f9-fc964d866e60" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Feb2026wiproRoboFramework.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LabSEssions/Feb18_lab/Labsessionfeb18.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LabSEssions/Feb18_lab/SauceDemoTest.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LabSEssions/Feb19_lab/Alert.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LabSEssions/Feb19_lab/Automation.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LabSEssions/Feb19_lab/DropDowns.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LabSEssions/Feb19_lab/RadioButton.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LabSEssions/Feb19_lab/ale.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Resource.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Selenium/Alerts.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Selenium/BrowserCommands.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Selenium/Download.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Selenium/DragDrop.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Selenium/DropDown.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Selenium/Login.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Selenium/MultiSelectCheckBox.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Selenium/RadioButtons.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestSuite/Keywords.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestSuite/KeywordsFromRes.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestSuite/SuitLevelST.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestSuite/TestLevelST.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestSuite/Testcase1.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestSuite/Testcase2.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestSuite/Variables.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="39pMeDKAFptHHRzvNaSCP5u5AXt" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Robot Framework.run [verify login with valid credentials].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-02acdf704d18-cbfc7b97e6b2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-252.28539.27" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a1c0c0d1-5259-4489-90f9-fc964d866e60" name="Changes" comment="" />
+      <created>1771388651739</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1771388651739</updated>
+    </task>
+    <servers />
+  </component>
+</project>

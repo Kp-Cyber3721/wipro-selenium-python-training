@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.3 on win32)" generated="2026-02-19T12:54:25.181086" rpa="false" schemaversion="5">
+<suite id="s1" name="Download" source="C:\Users\priya\PycharmProjects\Feb2026wiproRoboFramework\Selenium\Download.robot">
+<test id="s1-t1" name="Download File" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-19T12:54:25.365775" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/download'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-19T12:54:25.365508" elapsed="5.332790"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-02-19T12:54:30.699197" level="INFO">Clicking link 'upload.txt'.</msg>
+<arg>${FILE}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-19T12:54:30.698715" elapsed="0.384257"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="File Should Exist" owner="OperatingSystem">
+<msg time="2026-02-19T12:54:31.084485" level="INFO" html="true">File '&lt;a href="file://D:\Downloads\upload.txt"&gt;D:\Downloads\upload.txt&lt;/a&gt;' exists.</msg>
+<arg>${DOWNLOADS}/${FILE}</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<status status="PASS" start="2026-02-19T12:54:31.084005" elapsed="0.000548"/>
+</kw>
+<arg>10x</arg>
+<arg>1s</arg>
+<arg>File Should Exist</arg>
+<arg>${DOWNLOADS}/${FILE}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-02-19T12:54:31.083384" elapsed="0.001233"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-19T12:54:31.084952" elapsed="2.116384"/>
+</kw>
+<status status="PASS" start="2026-02-19T12:54:25.364516" elapsed="7.837168"/>
+</test>
+<status status="PASS" start="2026-02-19T12:54:25.182551" elapsed="8.019788"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Download" id="s1" pass="1" fail="0" skip="0">Download</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

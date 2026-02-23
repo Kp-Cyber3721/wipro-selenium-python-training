@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.3 on win32)" generated="2026-02-21T16:56:29.410733" rpa="false" schemaversion="5">
+<suite id="s1" name="Ecommerceautomation" source="C:\Users\priya\PycharmProjects\Feb2026wiproRoboFramework\NewProject\LabSEssions\Feb21_lab\Ecommerceautomation.robot">
+<kw name="Open Browser To Home Page" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:56:29.608017" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-21T16:56:29.607799" elapsed="4.482923"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-21T16:56:34.091000" elapsed="0.027278"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath://header</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-21T16:56:34.118485" elapsed="0.010910"/>
+</kw>
+<kw name="Remove Ads">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:56:34.130594" level="INFO">Executing JavaScript:
+document.querySelectorAll("iframe[id^='aswift'], #cartModal").forEach(el =&gt; el.style.display='none')
+Without any arguments.</msg>
+<arg>document.querySelectorAll("iframe[id^='aswift'], #cartModal").forEach(el =&gt; el.style.display='none')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-21T16:56:34.130049" elapsed="0.006727"/>
+</kw>
+<status status="PASS" start="2026-02-21T16:56:34.129784" elapsed="0.007209"/>
+</kw>
+<status status="PASS" start="2026-02-21T16:56:29.607144" elapsed="4.529939"/>
+</kw>
+<test id="s1-t1" name="TC_01 Register User" line="78">
+<kw name="Generate Dynamic Email">
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2026-02-21T16:56:34.139074" level="INFO">${timestamp} = 2026-02-21 16:56:34</msg>
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d%H%M%S</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2026-02-21T16:56:34.138499" elapsed="0.000617"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-02-21T16:56:34.139686" level="INFO">${email} = testuser_ 2026-02-21 16:56:34@example.com</msg>
+<var>${email}</var>
+<arg>testuser_</arg>
+<arg>${timestamp}@example.com</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-02-21T16:56:34.139256" elapsed="0.000474"/>
+</kw>
+<return>
+<value>${email}</value>
+<status status="PASS" start="2026-02-21T16:56:34.139822" elapsed="0.000077"/>
+</return>
+<msg time="2026-02-21T16:56:34.140077" level="INFO">${EMAIL} = testuser_ 2026-02-21 16:56:34@example.com</msg>
+<var>${EMAIL}</var>
+<status status="PASS" start="2026-02-21T16:56:34.138042" elapsed="0.002072"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-02-21T16:56:34.140745" level="INFO">${EMAIL} = testuser_ 2026-02-21 16:56:34@example.com</msg>
+<arg>${EMAIL}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-02-21T16:56:34.140422" elapsed="0.000369"/>
+</kw>
+<kw name="Go To Signup Login">
+<kw name="Remove Ads">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:56:34.142422" level="INFO">Executing JavaScript:
+document.querySelectorAll("iframe[id^='aswift'], #cartModal").forEach(el =&gt; el.style.display='none')
+Without any arguments.</msg>
+<arg>document.querySelectorAll("iframe[id^='aswift'], #cartModal").forEach(el =&gt; el.style.display='none')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-21T16:56:34.141873" elapsed="0.004641"/>
+</kw>
+<status status="PASS" start="2026-02-21T16:56:34.141535" elapsed="0.005176"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:56:34.147232" level="INFO">Clicking element 'xpath://a[text()=' Signup / Login']'.</msg>
+<arg>xpath://a[text()=' Signup / Login']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:56:34.146946" elapsed="1.750580"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath://h2[text()='New User Signup!']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-21T16:56:35.897699" elapsed="0.009161"/>
+</kw>
+<status status="PASS" start="2026-02-21T16:56:34.141149" elapsed="1.765858"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:56:35.907481" level="INFO">Typing text 'TestUser' into text field 'xpath://input[@data-qa='signup-name']'.</msg>
+<arg>xpath://input[@data-qa='signup-name']</arg>
+<arg>${NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:56:35.907256" elapsed="0.067147"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:56:35.975215" level="INFO">Typing text 'testuser_ 2026-02-21 16:56:34@example.com' into text field 'xpath://input[@data-qa='signup-email']'.</msg>
+<arg>xpath://input[@data-qa='signup-email']</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:56:35.974793" elapsed="0.083810"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath://button[@data-qa='signup-button']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-21T16:56:36.058932" elapsed="0.278176"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:56:36.337573" level="INFO">Clicking button 'xpath://button[@data-qa='signup-button']'.</msg>
+<arg>xpath://button[@data-qa='signup-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:56:36.337387" elapsed="0.052641"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:06.544697" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-21T16:57:06.544909" level="FAIL">Element 'xpath://h2[text()='Enter Account Information']' did not appear in 30 seconds.</msg>
+<arg>xpath://h2[text()='Enter Account Information']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2026-02-21T16:56:36.391034" elapsed="30.155521">Element 'xpath://h2[text()='Enter Account Information']' did not appear in 30 seconds.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath://input[@id='id_gender1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:06.546852" elapsed="0.000032"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath://input[@id='password']</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:06.547138" elapsed="0.000024"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>xpath://select[@id='days']</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:06.547311" elapsed="0.000026"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>xpath://select[@id='months']</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:06.547481" elapsed="0.000023"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>xpath://select[@id='years']</arg>
+<arg>2000</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:06.547670" elapsed="0.000023"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath://input[@id='newsletter']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:06.547835" elapsed="0.000022"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath://input[@id='optin']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:06.548064" elapsed="0.000032"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath://input[@id='first_name']</arg>
+<arg>${NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:06.548278" elapsed="0.000024"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath://input[@id='last_name']</arg>
+<arg>User</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:06.548454" elapsed="0.000023"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath://input[@id='company']</arg>
+<arg>TestCompany</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:06.548726" elapsed="0.000022"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath://input[@id='address1']</arg>
+<arg>Street 123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:06.548885" elapsed="0.000023"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath://input[@id='address2']</arg>
+<arg>Street 456</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:06.549047" elapsed="0.000022"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>xpath://select[@id='country']</arg>
+<arg>United States</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:06.549212" elapsed="0.000022"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath://input[@id='state']</arg>
+<arg>California</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:06.549371" elapsed="0.000021"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath://input[@id='city']</arg>
+<arg>Los Angeles</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:06.549531" elapsed="0.000021"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath://input[@id='zipcode']</arg>
+<arg>90001</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:06.549687" elapsed="0.000022"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath://input[@id='mobile_number']</arg>
+<arg>1234567890</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:06.549865" elapsed="0.000026"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath://button[@data-qa='create-account']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:06.550215" elapsed="0.000035"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath://button[@data-qa='create-account']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:06.550418" elapsed="0.000023"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Account Created!</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:06.550667" elapsed="0.000047"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath://a[@data-qa='continue-button']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:06.550910" elapsed="0.000024"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath://a[@data-qa='continue-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:06.551102" elapsed="0.000028"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Logged in as')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:06.551286" elapsed="0.000023"/>
+</kw>
+<status status="FAIL" start="2026-02-21T16:56:34.137206" elapsed="32.414329">Element 'xpath://h2[text()='Enter Account Information']' did not appear in 30 seconds.</status>
+</test>
+<test id="s1-t2" name="TC_02 Login User Correct" line="111">
+<kw name="Login User">
+<kw name="Go To Login">
+<kw name="Remove Ads">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:06.553713" level="INFO">Executing JavaScript:
+document.querySelectorAll("iframe[id^='aswift'], #cartModal").forEach(el =&gt; el.style.display='none')
+Without any arguments.</msg>
+<arg>document.querySelectorAll("iframe[id^='aswift'], #cartModal").forEach(el =&gt; el.style.display='none')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-21T16:57:06.553423" elapsed="0.005042"/>
+</kw>
+<status status="PASS" start="2026-02-21T16:57:06.553259" elapsed="0.005364"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:06.559091" level="INFO">Clicking element 'xpath://a[text()=' Signup / Login']'.</msg>
+<arg>xpath://a[text()=' Signup / Login']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:06.558806" elapsed="1.194218"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath://h2[text()='Login to your account']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-21T16:57:07.753222" elapsed="0.008868"/>
+</kw>
+<status status="PASS" start="2026-02-21T16:57:06.552995" elapsed="1.209203"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:07.762565" level="INFO">Typing text 'testuser_ 2026-02-21 16:56:34@example.com' into text field 'xpath://input[@data-qa='login-email']'.</msg>
+<arg>xpath://input[@data-qa='login-email']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:07.762323" elapsed="0.086041"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:07.849049" level="INFO">Typing text 'test123' into text field 'xpath://input[@data-qa='login-password']'.</msg>
+<arg>xpath://input[@data-qa='login-password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:07.848675" elapsed="0.055078"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath://button[@data-qa='login-button']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-21T16:57:07.903929" elapsed="0.278124"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:08.182429" level="INFO">Clicking button 'xpath://button[@data-qa='login-button']'.</msg>
+<arg>xpath://button[@data-qa='login-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:08.182222" elapsed="0.048090"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:13.490018" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-21T16:57:13.490197" level="FAIL">Element 'xpath://a[contains(text(),'Logged in as')]' did not appear in 5 seconds.</msg>
+<arg>xpath://a[contains(text(),'Logged in as')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2026-02-21T16:57:08.230485" elapsed="5.260639">Element 'xpath://a[contains(text(),'Logged in as')]' did not appear in 5 seconds.</status>
+</kw>
+<arg>${EMAIL}</arg>
+<arg>${PASSWORD}</arg>
+<status status="FAIL" start="2026-02-21T16:57:06.552539" elapsed="6.938727">Element 'xpath://a[contains(text(),'Logged in as')]' did not appear in 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2026-02-21T16:57:06.552072" elapsed="6.939458">Element 'xpath://a[contains(text(),'Logged in as')]' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t3" name="TC_03 Login User Incorrect" line="114">
+<kw name="Login User">
+<kw name="Go To Login">
+<kw name="Remove Ads">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:13.493414" level="INFO">Executing JavaScript:
+document.querySelectorAll("iframe[id^='aswift'], #cartModal").forEach(el =&gt; el.style.display='none')
+Without any arguments.</msg>
+<arg>document.querySelectorAll("iframe[id^='aswift'], #cartModal").forEach(el =&gt; el.style.display='none')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-21T16:57:13.493079" elapsed="0.003738"/>
+</kw>
+<status status="PASS" start="2026-02-21T16:57:13.492904" elapsed="0.004014"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:13.497209" level="INFO">Clicking element 'xpath://a[text()=' Signup / Login']'.</msg>
+<arg>xpath://a[text()=' Signup / Login']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:13.497032" elapsed="1.666602"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath://h2[text()='Login to your account']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-21T16:57:15.163897" elapsed="0.007908"/>
+</kw>
+<status status="PASS" start="2026-02-21T16:57:13.492730" elapsed="1.679186"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:15.172327" level="INFO">Typing text 'wrongemail@example.com' into text field 'xpath://input[@data-qa='login-email']'.</msg>
+<arg>xpath://input[@data-qa='login-email']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:15.172039" elapsed="0.071204"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:15.243765" level="INFO">Typing text 'wrongpass' into text field 'xpath://input[@data-qa='login-password']'.</msg>
+<arg>xpath://input[@data-qa='login-password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:15.243471" elapsed="0.049985"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath://button[@data-qa='login-button']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-21T16:57:15.293681" elapsed="0.277918"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:15.571951" level="INFO">Clicking button 'xpath://button[@data-qa='login-button']'.</msg>
+<arg>xpath://button[@data-qa='login-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:15.571770" elapsed="0.065652"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:20.828758" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-21T16:57:20.828932" level="FAIL">Element 'xpath://a[contains(text(),'Logged in as')]' did not appear in 5 seconds.</msg>
+<arg>xpath://a[contains(text(),'Logged in as')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2026-02-21T16:57:15.637655" elapsed="5.192160">Element 'xpath://a[contains(text(),'Logged in as')]' did not appear in 5 seconds.</status>
+</kw>
+<arg>wrongemail@example.com</arg>
+<arg>wrongpass</arg>
+<status status="FAIL" start="2026-02-21T16:57:13.492419" elapsed="7.337526">Element 'xpath://a[contains(text(),'Logged in as')]' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Your email or password is incorrect!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:20.830190" elapsed="0.000031"/>
+</kw>
+<status status="FAIL" start="2026-02-21T16:57:13.492006" elapsed="7.338402">Element 'xpath://a[contains(text(),'Logged in as')]' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t4" name="TC_04 Logout User" line="118">
+<kw name="Login User">
+<kw name="Go To Login">
+<kw name="Remove Ads">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:20.832359" level="INFO">Executing JavaScript:
+document.querySelectorAll("iframe[id^='aswift'], #cartModal").forEach(el =&gt; el.style.display='none')
+Without any arguments.</msg>
+<arg>document.querySelectorAll("iframe[id^='aswift'], #cartModal").forEach(el =&gt; el.style.display='none')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-21T16:57:20.832031" elapsed="0.004989"/>
+</kw>
+<status status="PASS" start="2026-02-21T16:57:20.831851" elapsed="0.005348"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:20.837649" level="INFO">Clicking element 'xpath://a[text()=' Signup / Login']'.</msg>
+<arg>xpath://a[text()=' Signup / Login']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:20.837379" elapsed="1.544415"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath://h2[text()='Login to your account']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-21T16:57:22.381991" elapsed="0.008646"/>
+</kw>
+<status status="PASS" start="2026-02-21T16:57:20.831679" elapsed="1.559121"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:22.391338" level="INFO">Typing text 'testuser_ 2026-02-21 16:56:34@example.com' into text field 'xpath://input[@data-qa='login-email']'.</msg>
+<arg>xpath://input[@data-qa='login-email']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:22.390986" elapsed="0.084649"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:22.476258" level="INFO">Typing text 'test123' into text field 'xpath://input[@data-qa='login-password']'.</msg>
+<arg>xpath://input[@data-qa='login-password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:22.475936" elapsed="0.046885"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath://button[@data-qa='login-button']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-21T16:57:22.523023" elapsed="0.271641"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:22.795007" level="INFO">Clicking button 'xpath://button[@data-qa='login-button']'.</msg>
+<arg>xpath://button[@data-qa='login-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:22.794831" elapsed="0.042907"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:28.102093" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-21T16:57:28.102341" level="FAIL">Element 'xpath://a[contains(text(),'Logged in as')]' did not appear in 5 seconds.</msg>
+<arg>xpath://a[contains(text(),'Logged in as')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2026-02-21T16:57:22.837955" elapsed="5.265327">Element 'xpath://a[contains(text(),'Logged in as')]' did not appear in 5 seconds.</status>
+</kw>
+<arg>${EMAIL}</arg>
+<arg>${PASSWORD}</arg>
+<status status="FAIL" start="2026-02-21T16:57:20.831416" elapsed="7.271999">Element 'xpath://a[contains(text(),'Logged in as')]' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Logout User">
+<status status="NOT RUN" start="2026-02-21T16:57:28.103703" elapsed="0.000033"/>
+</kw>
+<status status="FAIL" start="2026-02-21T16:57:20.831048" elapsed="7.272874">Element 'xpath://a[contains(text(),'Logged in as')]' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t5" name="TC_05 Register Existing Email" line="122">
+<kw name="Go To Signup Login">
+<kw name="Remove Ads">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:28.105660" level="INFO">Executing JavaScript:
+document.querySelectorAll("iframe[id^='aswift'], #cartModal").forEach(el =&gt; el.style.display='none')
+Without any arguments.</msg>
+<arg>document.querySelectorAll("iframe[id^='aswift'], #cartModal").forEach(el =&gt; el.style.display='none')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-21T16:57:28.105241" elapsed="0.009095"/>
+</kw>
+<status status="PASS" start="2026-02-21T16:57:28.104971" elapsed="0.009504"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:28.114868" level="INFO">Clicking element 'xpath://a[text()=' Signup / Login']'.</msg>
+<arg>xpath://a[text()=' Signup / Login']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:28.114636" elapsed="2.199370"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath://h2[text()='New User Signup!']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-21T16:57:30.314180" elapsed="0.008125"/>
+</kw>
+<status status="PASS" start="2026-02-21T16:57:28.104734" elapsed="2.217679"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:30.322887" level="INFO">Typing text 'TestUser' into text field 'xpath://input[@data-qa='signup-name']'.</msg>
+<arg>xpath://input[@data-qa='signup-name']</arg>
+<arg>${NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:30.322665" elapsed="0.072641"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:30.396129" level="INFO">Typing text 'existinguser@example.com' into text field 'xpath://input[@data-qa='signup-email']'.</msg>
+<arg>xpath://input[@data-qa='signup-email']</arg>
+<arg>${EXIST_EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:30.395755" elapsed="0.164406"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath://button[@data-qa='signup-button']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-21T16:57:30.560611" elapsed="0.275178"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:30.836299" level="INFO">Clicking button 'xpath://button[@data-qa='signup-button']'.</msg>
+<arg>xpath://button[@data-qa='signup-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:30.836113" elapsed="1.656162"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Email Address already exist!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-21T16:57:32.492651" elapsed="0.010558"/>
+</kw>
+<status status="PASS" start="2026-02-21T16:57:28.104352" elapsed="4.399124"/>
+</test>
+<test id="s1-t6" name="TC_06 Contact Us Form" line="130">
+<kw name="Go To Contact Us">
+<kw name="Remove Ads">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:32.504774" level="INFO">Executing JavaScript:
+document.querySelectorAll("iframe[id^='aswift'], #cartModal").forEach(el =&gt; el.style.display='none')
+Without any arguments.</msg>
+<arg>document.querySelectorAll("iframe[id^='aswift'], #cartModal").forEach(el =&gt; el.style.display='none')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-21T16:57:32.504496" elapsed="0.004096"/>
+</kw>
+<status status="PASS" start="2026-02-21T16:57:32.504348" elapsed="0.004394"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:32.509157" level="INFO">Clicking element 'xpath://a[text()=' Contact us']'.</msg>
+<arg>xpath://a[text()=' Contact us']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:32.508911" elapsed="1.590250"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath://h2[text()='Get In Touch']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-21T16:57:34.099377" elapsed="0.015539"/>
+</kw>
+<status status="PASS" start="2026-02-21T16:57:32.504161" elapsed="1.610895"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:34.115565" level="INFO">Typing text 'TestUser' into text field 'xpath://input[@name='name']'.</msg>
+<arg>xpath://input[@name='name']</arg>
+<arg>${NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:34.115333" elapsed="0.058701"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:34.174860" level="INFO">Typing text 'testuser_ 2026-02-21 16:56:34@example.com' into text field 'xpath://input[@name='email']'.</msg>
+<arg>xpath://input[@name='email']</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:34.174441" elapsed="0.116734"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:34.291755" level="INFO">Typing text 'Test Subject' into text field 'xpath://input[@name='subject']'.</msg>
+<arg>xpath://input[@name='subject']</arg>
+<arg>Test Subject</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:34.291538" elapsed="0.074682"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:34.367263" level="INFO">Typing text 'Test message' into text field 'xpath://textarea[@name='message']'.</msg>
+<arg>xpath://textarea[@name='message']</arg>
+<arg>Test message</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:34.366752" elapsed="0.143653"/>
+</kw>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2026-02-21T16:57:34.511676" level="INFO" html="true">Created file '&lt;a href="file://C:\Users\priya\PycharmProjects\Feb2026wiproRoboFramework\NewProject\LabSEssions\Feb21_lab\testfile.txt"&gt;C:\Users\priya\PycharmProjects\Feb2026wiproRoboFramework\NewProject\LabSEssions\Feb21_lab\testfile.txt&lt;/a&gt;'.</msg>
+<arg>C:\\Users\\priya\\PycharmProjects\\Feb2026wiproRoboFramework\\NewProject\\LabSEssions\\Feb21_lab/testfile.txt</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2026-02-21T16:57:34.510762" elapsed="0.000994"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:34.512243" level="INFO">Sending C:\Users\priya\PycharmProjects\Feb2026wiproRoboFramework\NewProject\LabSEssions\Feb21_lab\testfile.txt to browser.</msg>
+<arg>xpath://input[@name='upload_file']</arg>
+<arg>C:\\Users\\priya\\PycharmProjects\\Feb2026wiproRoboFramework\\NewProject\\LabSEssions\\Feb21_lab/testfile.txt</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:34.512005" elapsed="0.033936"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath://input[@name='submit']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-21T16:57:34.546236" elapsed="0.274706"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:34.821620" level="INFO">Clicking button 'xpath://input[@name='submit']'.</msg>
+<arg>xpath://input[@name='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:34.821328" elapsed="0.070519"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:34.892973" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2026-02-21T16:57:40.181340" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-21T16:57:40.181520" level="FAIL">Alert not found in 5 seconds.</msg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="FAIL" start="2026-02-21T16:57:34.892437" elapsed="5.291051">Alert not found in 5 seconds.</status>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<arg>accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:40.183832" elapsed="0.000040"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Success! Your details have been submitted successfully.</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:40.184073" elapsed="0.000035"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath://a[text()=' Home']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:40.184306" elapsed="0.000034"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath://header</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:40.184554" elapsed="0.000024"/>
+</kw>
+<status status="FAIL" start="2026-02-21T16:57:32.503818" elapsed="7.681013">Alert not found in 5 seconds.</status>
+</test>
+<test id="s1-t7" name="TC_07 Verify Test Cases Page" line="146">
+<kw name="Remove Ads">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:40.186622" level="INFO">Executing JavaScript:
+document.querySelectorAll("iframe[id^='aswift'], #cartModal").forEach(el =&gt; el.style.display='none')
+Without any arguments.</msg>
+<arg>document.querySelectorAll("iframe[id^='aswift'], #cartModal").forEach(el =&gt; el.style.display='none')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-21T16:57:40.186149" elapsed="0.004145"/>
+</kw>
+<status status="PASS" start="2026-02-21T16:57:40.185891" elapsed="0.004501"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath://a[text()=' Test Cases']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-21T16:57:40.190635" elapsed="0.273124"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:40.464340" level="INFO">Clicking element 'xpath://a[text()=' Test Cases']'.</msg>
+<arg>xpath://a[text()=' Test Cases']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:40.464131" elapsed="3.298452"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Test Cases</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-21T16:57:43.762887" elapsed="0.009126"/>
+</kw>
+<status status="PASS" start="2026-02-21T16:57:40.185385" elapsed="3.586891"/>
+</test>
+<test id="s1-t8" name="TC_08 Verify All Products Page" line="152">
+<kw name="Go To Products">
+<kw name="Remove Ads">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:43.773999" level="INFO">Executing JavaScript:
+document.querySelectorAll("iframe[id^='aswift'], #cartModal").forEach(el =&gt; el.style.display='none')
+Without any arguments.</msg>
+<arg>document.querySelectorAll("iframe[id^='aswift'], #cartModal").forEach(el =&gt; el.style.display='none')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-21T16:57:43.773553" elapsed="0.004995"/>
+</kw>
+<status status="PASS" start="2026-02-21T16:57:43.773289" elapsed="0.005409"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:43.779276" level="INFO">Executing JavaScript:
+document.querySelector("a[href='/products']").click()
+Without any arguments.</msg>
+<arg>document.querySelector("a[href='/products']").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-21T16:57:43.778842" elapsed="1.913885"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath://h2[text()='All Products']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-21T16:57:45.692982" elapsed="0.010289"/>
+</kw>
+<status status="PASS" start="2026-02-21T16:57:43.773036" elapsed="1.930379"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath://div[@class='productinfo text-center']/a[1]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-21T16:57:45.703708" elapsed="0.298439"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:46.002654" level="INFO">Clicking element 'xpath://div[@class='productinfo text-center']/a[1]'.</msg>
+<msg time="2026-02-21T16:57:47.328157" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-21T16:57:47.328372" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a data-product-id="1" class="btn btn-default add-to-cart"&gt;...&lt;/a&gt; is not clickable at point (712, 756). Other element would receive the click: &lt;a data-product-id="1" class="btn btn-default add-to-cart"&gt;...&lt;/a&gt;
+  (Session info: chrome=145.0.7632.110); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff61d584435
+	0x7ff61d584490
+	0x7ff61d31d49d
+	0x7ff61d380845
+	0x7ff61d37df5a
+	0x7ff61d37ade5
+	0x7ff61d379c97
+	0x7ff61d36b5c3
+	0x7ff61d3a17ca
+	0x7ff61d36aa46
+	0x7ff61d3c5728
+	0x7ff61d368e38
+	0x7ff61d369d23
+	0x7ff61d853b30
+	0x7ff61d84e3b8
+	0x7ff61d86e72a
+	0x7ff61d5a07e5
+	0x7ff61d5a978c
+	0x7ff61d58d794
+	0x7ff61d58d946
+	0x7ff61d573457
+	0x7ffe2bc1e8d7
+	0x7ffe2d64c40c
+</msg>
+<arg>xpath://div[@class='productinfo text-center']/a[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-02-21T16:57:46.002453" elapsed="1.328991">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a data-product-id="1" class="btn btn-default add-to-cart"&gt;...&lt;/a&gt; is not clickable at point (712, 756). Other element would receive the click: &lt;a data-product-id="1" class="btn btn-default add-to-cart"&gt;...&lt;/a&gt;
+  (Session info: chrome=145.0.7632.110); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff61d584435
+	0x7ff61d584490
+	0x7ff61d31d49d
+	0x7ff61d380845
+	0x7ff61d37df5a
+	0x7ff61d37ade5
+	0x7ff61d379c97
+	0x7ff61d36b5c3
+	0x7ff61d3a17ca
+	0x7ff61d36aa46
+	0x7ff61d3c5728
+	0x7ff61d368e38
+	0x7ff61d369d23
+	0x7ff61d853b30
+	0x7ff61d84e3b8
+	0x7ff61d86e72a
+	0x7ff61d5a07e5
+	0x7ff61d5a978c
+	0x7ff61d58d794
+	0x7ff61d58d946
+	0x7ff61d573457
+	0x7ffe2bc1e8d7
+	0x7ffe2d64c40c
+</status>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath://div[@class='product-information']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2026-02-21T16:57:47.331833" elapsed="0.000041"/>
+</kw>
+<status status="FAIL" start="2026-02-21T16:57:43.772634" elapsed="3.559495">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a data-product-id="1" class="btn btn-default add-to-cart"&gt;...&lt;/a&gt; is not clickable at point (712, 756). Other element would receive the click: &lt;a data-product-id="1" class="btn btn-default add-to-cart"&gt;...&lt;/a&gt;
+  (Session info: chrome=145.0.7632.110); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff61d584435
+	0x7ff61d584490
+	0x7ff61d31d49d
+	0x7ff61d380845
+	0x7ff61d37df5a
+	0x7ff61d37ade5
+	0x7ff61d379c97
+	0x7ff61d36b5c3
+	0x7ff61d3a17ca
+	0x7ff61d36aa46
+	0x7ff61d3c5728
+	0x7ff61d368e38
+	0x7ff61d369d23
+	0x7ff61d853b30
+	0x7ff61d84e3b8
+	0x7ff61d86e72a
+	0x7ff61d5a07e5
+	0x7ff61d5a978c
+	0x7ff61d58d794
+	0x7ff61d58d946
+	0x7ff61d573457
+	0x7ffe2bc1e8d7
+	0x7ffe2d64c40c
+</status>
+</test>
+<test id="s1-t9" name="TC_09 Search Product" line="158">
+<kw name="Go To Products">
+<kw name="Remove Ads">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:47.333756" level="INFO">Executing JavaScript:
+document.querySelectorAll("iframe[id^='aswift'], #cartModal").forEach(el =&gt; el.style.display='none')
+Without any arguments.</msg>
+<arg>document.querySelectorAll("iframe[id^='aswift'], #cartModal").forEach(el =&gt; el.style.display='none')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-21T16:57:47.333450" elapsed="0.007602"/>
+</kw>
+<status status="PASS" start="2026-02-21T16:57:47.333263" elapsed="0.007956"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:47.341919" level="INFO">Executing JavaScript:
+document.querySelector("a[href='/products']").click()
+Without any arguments.</msg>
+<arg>document.querySelector("a[href='/products']").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-21T16:57:47.341396" elapsed="1.116025"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath://h2[text()='All Products']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-21T16:57:48.457662" elapsed="0.017418"/>
+</kw>
+<status status="PASS" start="2026-02-21T16:57:47.333017" elapsed="1.142170"/>
+</kw>
+<kw name="Search Product">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:48.476130" level="INFO">Typing text 'Fancy Dress' into text field 'xpath://input[@id='search_product']'.</msg>
+<arg>xpath://input[@id='search_product']</arg>
+<arg>${product_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:48.475777" elapsed="0.099585"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath://button[@id='submit_search']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-21T16:57:48.575617" elapsed="0.280102"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:48.856078" level="INFO">Clicking button 'xpath://button[@id='submit_search']'.</msg>
+<arg>xpath://button[@id='submit_search']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:48.855893" elapsed="1.807952"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:55.945624" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-21T16:57:55.945802" level="FAIL">Text 'SEARCHED PRODUCTS' did not appear in 5 seconds.</msg>
+<arg>SEARCHED PRODUCTS</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2026-02-21T16:57:50.664061" elapsed="5.282640">Text 'SEARCHED PRODUCTS' did not appear in 5 seconds.</status>
+</kw>
+<arg>${PRODUCT}</arg>
+<status status="FAIL" start="2026-02-21T16:57:48.475473" elapsed="7.471355">Text 'SEARCHED PRODUCTS' did not appear in 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2026-02-21T16:57:47.332597" elapsed="8.614462">Text 'SEARCHED PRODUCTS' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t10" name="TC_10 Verify Subscription" line="162">
+<kw name="Scroll To Footer">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:55.948314" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-21T16:57:55.948050" elapsed="0.006349"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-21T16:57:56.955234" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-21T16:57:55.954594" elapsed="1.000785"/>
+</kw>
+<status status="PASS" start="2026-02-21T16:57:55.947812" elapsed="1.007696"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Subscription</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-21T16:57:56.955809" elapsed="0.007648"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:56.963964" level="INFO">Typing text 'testuser_ 2026-02-21 16:56:34@example.com' into text field 'xpath://input[@id='susbscribe_email']'.</msg>
+<arg>xpath://input[@id='susbscribe_email']</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:56.963738" elapsed="0.110906"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath://button[@id='subscribe']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-21T16:57:57.075015" elapsed="0.283447"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-21T16:57:57.358972" level="INFO">Clicking button 'xpath://button[@id='subscribe']'.</msg>
+<arg>xpath://button[@id='subscribe']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T16:57:57.358778" elapsed="0.049601"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>You have been successfully subscribed!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-21T16:57:57.408705" elapsed="0.008885"/>
+</kw>
+<status status="PASS" start="2026-02-21T16:57:55.947470" elapsed="1.470430"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-21T16:57:57.418621" elapsed="2.233051"/>
+</kw>
+<status status="FAIL" start="2026-02-21T16:56:29.412218" elapsed="90.239564"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="7" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Ecommerceautomation" id="s1" pass="3" fail="7" skip="0">Ecommerceautomation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

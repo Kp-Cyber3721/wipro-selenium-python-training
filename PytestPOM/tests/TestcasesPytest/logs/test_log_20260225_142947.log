@@ -1,0 +1,5 @@
+2026-02-25 14:29:48,014 - INFO - ====== WebDriver manager ======
+2026-02-25 14:29:48,995 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-25 14:29:49,468 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-25 14:29:49,936 - INFO - Driver [C:\Users\priya\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-25 14:29:51,102 - INFO - Launching SauceDemo with user: standard_user

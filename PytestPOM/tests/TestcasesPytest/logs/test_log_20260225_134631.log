@@ -1,0 +1,36 @@
+2026-02-25 13:46:31,131 - INFO - ====== WebDriver manager ======
+2026-02-25 13:46:32,121 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-25 13:46:32,638 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-25 13:46:33,099 - INFO - Driver [C:\Users\priya\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-25 13:46:34,211 - INFO - Launching SauceDemo with user: standard_user
+2026-02-25 13:46:35,310 - INFO - Valid login test
+2026-02-25 13:46:37,437 - INFO - ====== WebDriver manager ======
+2026-02-25 13:46:38,428 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-25 13:46:38,896 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-25 13:46:39,349 - INFO - Driver [C:\Users\priya\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-25 13:46:40,463 - INFO - Launching SauceDemo with user: standard_user
+2026-02-25 13:46:41,519 - INFO - Valid login test
+2026-02-25 13:46:43,627 - INFO - ====== WebDriver manager ======
+2026-02-25 13:46:44,632 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-25 13:46:45,113 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-25 13:46:45,605 - INFO - Driver [C:\Users\priya\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-25 13:46:46,724 - INFO - Launching SauceDemo with user: standard_user
+2026-02-25 13:46:47,797 - INFO - Valid login test
+2026-02-25 13:46:49,916 - INFO - ====== WebDriver manager ======
+2026-02-25 13:46:50,937 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-25 13:46:51,445 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-25 13:46:51,911 - INFO - Driver [C:\Users\priya\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-25 13:46:53,011 - INFO - Launching SauceDemo with user: standard_user
+2026-02-25 13:46:54,458 - INFO - Valid login test
+2026-02-25 13:46:56,578 - INFO - ====== WebDriver manager ======
+2026-02-25 13:46:57,552 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-25 13:46:58,027 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-25 13:46:58,512 - INFO - Driver [C:\Users\priya\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-25 13:46:59,633 - INFO - Launching SauceDemo with user: standard_user
+2026-02-25 13:47:00,715 - INFO - Valid login test
+2026-02-25 13:47:02,833 - INFO - ====== WebDriver manager ======
+2026-02-25 13:47:03,815 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-25 13:47:04,275 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-25 13:47:04,736 - INFO - Driver [C:\Users\priya\.wdm\drivers\chromedriver\win64\145.0.7632.117\chromedriver-win32/chromedriver.exe] found in cache
+2026-02-25 13:47:05,823 - INFO - Launching SauceDemo with user: standard_user
+2026-02-25 13:47:06,898 - INFO - Valid login test

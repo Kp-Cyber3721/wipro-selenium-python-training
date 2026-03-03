@@ -1,0 +1,16 @@
+OrderID,Date,Region,Product,Category,Quantity,Price
+201,2024-01-05,North,Smart TV,Electronics,1,60000
+202,2024-01-18,South,Refrigerator,Appliances,2,45000
+203,2024-02-07,East,Microwave,Appliances,3,15000
+204,2024-02-25,West,Sofa,Furniture,1,30000
+205,2024-03-12,Central,Dining Table,Furniture,2,25000
+206,2024-03-22,North,Smartphone,Electronics,4,20000
+207,2024-04-03,South,Washing Machine,Appliances,1,40000
+208,2024-04-15,East,Laptop,Electronics,2,55000
+209,2024-05-10,West,Headphones,Electronics,5,3000
+210,2024-05-20,Central,Air Conditioner,Appliances,1,50000
+211,2024-06-08,North,Tablet,Electronics,3,18000
+212,2024-06-19,South,Bed,Furniture,1,35000
+213,2024-07-02,East,Camera,Electronics,2,45000
+214,2024-07-18,West,Printer,Electronics,4,12000
+215,2024-08-05,Central,Water Purifier,Appliances,2,22000
